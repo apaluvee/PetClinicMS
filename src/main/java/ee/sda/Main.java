@@ -1,6 +1,7 @@
 package ee.sda;
 
-import src.main.java.ee.sda.DB.DatabaseUtil;
+
+import ee.sda.DB.DatabaseUtil;
 
 public class Main {
 
