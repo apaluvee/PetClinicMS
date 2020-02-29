@@ -1,4 +1,4 @@
-package ee.sda;
+package src.main.java.ee.sda.DB;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

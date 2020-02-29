@@ -13,6 +13,14 @@ email VARCHAR (20),
 phone VARCHAR (20)
 );
 
+CREATE TABLE pet (
+    pet_id  INT AUTO_INCREMENT PRIMARY KEY,
+    species VARCHAR(50),
+    pet_name VARCHAR(50) NOT NULL,
+    owner_name VARCHAR(50) NOT NULL,
+    dob DATE
+);
+
 create table consultation(
 consult_id INT AUTO_INCREMENT PRIMARY KEY,
 vet_id INT ,
@@ -23,13 +31,6 @@ consult_date timestamp default now(),
 consult_description longtext
 );
 
-CREATE TABLE pet (
-    pet_id  INT AUTO_INCREMENT PRIMARY KEY,
-    species VARCHAR(50),
-    pet_name VARCHAR(50) NOT NULL,
-    owner_name VARCHAR(50) NOT NULL,
-    dob DATE
-);
 
 CREATE TABLE vaccine (
     vaccine_id INT AUTO_INCREMENT PRIMARY KEY,
