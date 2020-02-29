@@ -1,5 +1,6 @@
 package ee.sda.DB;
 
+import ee.sda.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -17,31 +18,34 @@ public class DatabaseUtil {
         if (sessionFactory == null) {
 
 
-        Configuration configuration = new Configuration();
+            Configuration configuration = new Configuration();
 
-        Properties properties = new Properties();
-        properties.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
+            Properties properties = new Properties();
+            properties.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
 
-        properties.put(Environment.URL, "jdbc:mysql://localhost:3306/petclinicMS");
+            properties.put(Environment.URL, "jdbc:mysql://localhost:3306/petclinicMS");
 
-        properties.put(Environment.USER, "root");
-        properties.put(Environment.PASS, "    ");
+            properties.put(Environment.USER, "root");
+            properties.put(Environment.PASS, "13ddonjee");
 
-        properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
+            properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
 
-        properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-        properties.put(Environment.HBM2DDL_AUTO, "none");
+            properties.put(Environment.HBM2DDL_AUTO, "none");
 
-        properties.put(Environment.SHOW_SQL, true);
+            properties.put(Environment.SHOW_SQL, true);
 
-        configuration.setProperties(properties);
-        //configuration.addAnnotatedClass(Job.class);
+            configuration.addAnnotatedClass(VeterinarianDAO.class);
+            configuration.addAnnotatedClass(PetDAO.class);
+            configuration.addAnnotatedClass(VaccineDAO.class);
+            configuration.addAnnotatedClass(ConsultationDAO.class);
+            configuration.addAnnotatedClass(Pet_VaccineDAO.class);
+            configuration.setProperties(properties);
 
-        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 
-        sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-
+            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
 
         }

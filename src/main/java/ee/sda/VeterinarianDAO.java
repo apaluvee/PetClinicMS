@@ -5,5 +5,4 @@ public class VeterinarianDAO extends AbstractDAO {
         super(entityClazz);
     }
 
-
 }

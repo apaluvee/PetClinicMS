@@ -11,13 +11,16 @@ public class Main {
         DatabaseUtil.getSessionFactory();
 
 
-        VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
+        VeterinarianDAO veterinarianDAO = new VeterinarianDAO(Veterinarian.class);
+        //Veterinarian veterinarian = (Veterinarian) veterinarianDAO.save(veterinarianDAO);
+        Veterinarian veterinarian =  veterinarianDAO.save(Veterinarian);
+        veterinarian.setFirst_name("Kaja");
+        veterinarian.setLast_name("Klass");
+        veterinarian = VeterinarianDAO.save(veterinarian);
+        System.out.println(veterinarian);
 
-       /* Job job = jobDAO.find(1);
-        System.out.println(job);
 
-        Job newJob = new Job();
-        newJob.setTitle("New Job with hibernate");*/
+
 
     }
 
