@@ -29,6 +29,7 @@ public abstract class AbstractDAO <T, K> {
 
             return find(id);
         } catch (HibernateException e) {
+            e.printStackTrace();
             transaction.rollback();
             return null;
         }

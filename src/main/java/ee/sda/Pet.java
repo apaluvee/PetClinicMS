@@ -2,6 +2,7 @@ package ee.sda;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -24,6 +25,9 @@ public class Pet {
 
     @Column(name="dob")
     private LocalDate dob;
+
+    @OneToMany
+    private List<Consultation> consultations;
 
 
     public Pet(String petName, String ownerName) {
@@ -69,6 +73,14 @@ public class Pet {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public List<Consultation> getConsultations() {
+        return consultations;
+    }
+
+    public void setConsultations(List<Consultation> consultations) {
+        this.consultations = consultations;
     }
 
     @Override

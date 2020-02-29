@@ -36,11 +36,11 @@ public class DatabaseUtil {
 
             properties.put(Environment.SHOW_SQL, true);
 
-            configuration.addAnnotatedClass(VeterinarianDAO.class);
-            configuration.addAnnotatedClass(PetDAO.class);
-            configuration.addAnnotatedClass(VaccineDAO.class);
-            configuration.addAnnotatedClass(ConsultationDAO.class);
-            configuration.addAnnotatedClass(Pet_VaccineDAO.class);
+            configuration.addAnnotatedClass(Veterinarian.class);
+            configuration.addAnnotatedClass(Pet.class);
+            configuration.addAnnotatedClass(Vaccine.class);
+            configuration.addAnnotatedClass(Consultation.class);
+            configuration.addAnnotatedClass(Pet_Vaccine.class);
             configuration.setProperties(properties);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

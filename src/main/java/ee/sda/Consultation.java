@@ -2,6 +2,7 @@ package ee.sda;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,12 +21,12 @@ public class Consultation {
     @Column(name="consult_description")
     private String consultDescription;
 
-    @OneToMany
-    @JoinColumn(name="pet_id")
+    @OneToOne(mappedBy = "consultations")
     private Pet pet;
 
-    @OneToMany
-    @JoinColumn(name="vet_id")
+
+    @OneToOne(mappedBy = "consultations")
+    @JoinColumn(name = "vet_id")
     private Veterinarian veterinarian;
 
     public int getId() {

@@ -1,6 +1,7 @@
 package ee.sda;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -30,6 +31,10 @@ public class Veterinarian {
 
     @Column(name = "phone")
     private String phone;
+
+    @OneToMany
+    @JoinColumn(name = "consult_id")
+    private List<Consultation> consultations;
 
 
     public Veterinarian(String first_name, String last_name) {
@@ -93,6 +98,13 @@ public class Veterinarian {
         this.phone = phone;
     }
 
+    public List<Consultation> getConsultations() {
+        return consultations;
+    }
+
+    public void setConsultations(List<Consultation> consultations) {
+        this.consultations = consultations;
+    }
 
     @Override
     public boolean equals(Object o) {
