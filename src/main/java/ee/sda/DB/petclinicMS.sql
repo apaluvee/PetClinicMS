@@ -10,8 +10,7 @@ last_name VARCHAR (20) NOT NULL,
 address VARCHAR (100),
 speciality VARCHAR (50),
 email VARCHAR (20),
-phone VARCHAR (20),
-consult_id INT
+phone VARCHAR (20)
 );
 
 create table consultation(
@@ -39,8 +38,10 @@ CREATE TABLE vaccine (
 );
 
 CREATE TABLE pet_vaccine (
-    FOREIGN KEY (pet_id ) REFERENCES pet (pet_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (vaccine_id ) REFERENCES vaccine (vaccine_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (consult_id ) REFERENCES veterinarian (consult_id) ON DELETE CASCADE ON UPDATE CASCADE
+	vaccine_id INT,
+	pet_id  INT ,
+	consult_id INT ,
+    FOREIGN KEY (pet_id) REFERENCES pet (pet_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (vaccine_id) REFERENCES vaccine (vaccine_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (consult_id) REFERENCES consultation (consult_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
