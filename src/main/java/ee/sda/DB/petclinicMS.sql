@@ -39,8 +39,11 @@ CREATE TABLE vaccine (
 );
 
 CREATE TABLE pet_vaccine (
+    pet_id INT ,
     FOREIGN KEY (pet_id ) REFERENCES pet (pet_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    vaccine_id INT,
     FOREIGN KEY (vaccine_id ) REFERENCES vaccine (vaccine_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (consult_id ) REFERENCES veterinarian (consult_id) ON DELETE CASCADE ON UPDATE CASCADE
+    consult_id INT,
+    FOREIGN KEY (consult_id ) REFERENCES consultation (consult_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
