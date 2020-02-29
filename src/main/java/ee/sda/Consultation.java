@@ -10,8 +10,8 @@ import java.util.Objects;
 public class Consultation {
 
     @Id
-    @Column(name="consult_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="consult_id")
     private int id;
 
     @Column(name="consult_date")
@@ -20,11 +20,11 @@ public class Consultation {
     @Column(name="consult_description")
     private String consultDescription;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name="pet_id")
     private Pet pet;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name="vet_id")
     private Veterinarian veterinarian;
 

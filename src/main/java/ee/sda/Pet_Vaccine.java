@@ -9,14 +9,16 @@ import java.util.Objects;
 public class Pet_Vaccine {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pet_id")
+    @OneToMany
+    @JoinColumn(name = "pet_id")
     private int pet_id;
 
-    @Column(name = "vaccine_id")
+    @OneToMany
+    @JoinColumn(name = "vaccine_id")
     private int vaccine_id;
 
-    @Column(name = "consult_id")
+    @OneToOne
+    @JoinColumn(name = "consult_id")
     private int consult_id;
 
     public int getPet_id() {
