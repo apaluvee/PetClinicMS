@@ -21,12 +21,10 @@ public class Consultation {
     @Column(name="consult_description")
     private String consultDescription;
 
-    @OneToOne(mappedBy = "consultations")
+    @OneToOne
     private Pet pet;
 
-
-    @OneToOne(mappedBy = "consultations")
-    @JoinColumn(name = "vet_id")
+    @OneToOne
     private Veterinarian veterinarian;
 
     public int getId() {

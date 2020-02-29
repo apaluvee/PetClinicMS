@@ -36,6 +36,8 @@ public class Veterinarian {
     @JoinColumn(name = "consult_id")
     private List<Consultation> consultations;
 
+    public Veterinarian() {
+    }
 
     public Veterinarian(String first_name, String last_name) {
         this.first_name = first_name;

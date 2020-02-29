@@ -40,7 +40,6 @@ public class DatabaseUtil {
             configuration.addAnnotatedClass(Pet.class);
             configuration.addAnnotatedClass(Vaccine.class);
             configuration.addAnnotatedClass(Consultation.class);
-            configuration.addAnnotatedClass(Pet_Vaccine.class);
             configuration.setProperties(properties);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

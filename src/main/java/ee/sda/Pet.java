@@ -10,24 +10,28 @@ import java.util.Objects;
 
 public class Pet {
     @Id
-    @Column(name="pet_id")
+    @Column(name = "pet_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="pet_name")
+    @Column(name = "pet_name")
     private String petName;
 
-    @Column(name="owner_name")
+    @Column(name = "owner_name")
     private String ownerName;
 
-    @Column(name="species")
+    @Column(name = "species")
     private String species;
 
-    @Column(name="dob")
+    @Column(name = "dob")
     private LocalDate dob;
 
     @OneToMany
     private List<Consultation> consultations;
+
+    @ManyToMany
+    @JoinTable(name = "pet_vaccine", joinColumns = {@JoinColumn(name = "pet_id")}, inverseJoinColumns = {@JoinColumn(name = "vaccine_id")})
+    private List<Vaccine> vaccines;
 
 
     public Pet(String petName, String ownerName) {

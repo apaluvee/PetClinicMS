@@ -1,6 +1,7 @@
 package ee.sda;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -19,6 +20,8 @@ public class Vaccine {
     @Column(name = "vaccine_description")
     private String vaccine_description;
 
+    @ManyToMany(mappedBy = "vaccines")
+    private List<Pet> pets;
 
     public Vaccine(String vaccine_name, String vaccine_description) {
         this.vaccine_name = vaccine_name;
