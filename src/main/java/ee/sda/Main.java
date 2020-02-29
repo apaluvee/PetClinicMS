@@ -1,4 +1,4 @@
-package ee.sda;
+package java.ee.sda;
 
 public class Main {
 
