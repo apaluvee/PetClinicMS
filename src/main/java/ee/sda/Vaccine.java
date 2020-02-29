@@ -20,6 +20,11 @@ public class Vaccine {
     private String vaccine_description;
 
 
+    public Vaccine(String vaccine_name, String vaccine_description) {
+        this.vaccine_name = vaccine_name;
+        this.vaccine_description = vaccine_description;
+    }
+
     public int getId() {
         return vaccine_id;
     }

@@ -25,6 +25,12 @@ public class Pet {
     @Column(name="dob")
     private LocalDate dob;
 
+
+    public Pet(String petName, String ownerName) {
+        this.petName = petName;
+        this.ownerName = ownerName;
+    }
+
     public int getId() {
         return id;
     }

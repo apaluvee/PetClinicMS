@@ -11,6 +11,14 @@ public class Main {
         DatabaseUtil.getSessionFactory();
 
 
+        VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
+
+       /* Job job = jobDAO.find(1);
+        System.out.println(job);
+
+        Job newJob = new Job();
+        newJob.setTitle("New Job with hibernate");*/
+
     }
 
 }
