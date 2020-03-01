@@ -9,7 +9,7 @@ first_name VARCHAR (20) NOT NULL,
 last_name VARCHAR (20) NOT NULL,
 address VARCHAR (100),
 speciality VARCHAR (50),
-email VARCHAR (20),
+email VARCHAR (50),
 phone VARCHAR (20)
 );
 

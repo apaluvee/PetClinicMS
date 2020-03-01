@@ -1,6 +1,7 @@
 package ee.sda.dao;
 
 import ee.sda.db.DatabaseUtil;
+import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
