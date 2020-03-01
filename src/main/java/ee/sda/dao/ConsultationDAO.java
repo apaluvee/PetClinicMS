@@ -6,7 +6,7 @@ import ee.sda.entities.Veterinarian;
 
 import java.time.LocalDate;
 
-public class ConsultationDAO extends AbstractDAO<Consultation, String > {
+public class ConsultationDAO extends AbstractDAO<Consultation, Integer > {
     public ConsultationDAO() {
         super(Consultation.class);
     }
