@@ -57,6 +57,7 @@ public abstract class AbstractDAO <T, K> {
             transaction.commit();
         } catch (HibernateException e) {
             transaction.rollback();
+            e.printStackTrace();
         }
 
     }
@@ -73,14 +74,17 @@ public abstract class AbstractDAO <T, K> {
             session.delete(object);
 
             transaction.commit();
+            session.close();
         } catch (HibernateException e) {
             transaction.rollback();
         }
+
     }
 
     public T find(K id) {
         Session session = DatabaseUtil.getSessionFactory().openSession();
         T object = session.find(entityClazz, id);
+        session.close();
         return object;
     }
 

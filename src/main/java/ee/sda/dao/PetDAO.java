@@ -16,13 +16,16 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         return save(new Pet(species, petName, ownerName, dob));
     }
 
-    public void updatePet(int id, String species, String petName, String ownerName, LocalDate dob) {
+    public Pet updatePet(int id, String species, String petName, String ownerName, LocalDate dob) {
         Pet pet = find(id);
         pet.setSpecies(species);
         pet.setPetName(petName);
         pet.setOwnerName(ownerName);
         pet.setDob(dob);
+        update(pet);
+        return pet;
     }
+
     public Pet findPet(int id) {
         Pet pet = find(id);
         return pet;
