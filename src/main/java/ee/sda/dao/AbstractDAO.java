@@ -1,4 +1,4 @@
-package ee.sda.DAO;
+package ee.sda.dao;
 
 import ee.sda.db.DatabaseUtil;
 import org.hibernate.HibernateException;

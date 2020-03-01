@@ -1,7 +1,7 @@
 package ee.sda;
 
 
-import ee.sda.DAO.VeterinarianDAO;
+import ee.sda.dao.VeterinarianDAO;
 import ee.sda.Entities.Veterinarian;
 import ee.sda.db.DatabaseUtil;
 
