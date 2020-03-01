@@ -112,15 +112,6 @@ public class Pet {
         return Objects.hash(id, petName, ownerName, species, dob);
     }
 
-    public Pet(int id, String petName, String ownerName, String species, LocalDate dob, List<Consultation> consultations, List<Vaccine> vaccines) {
-        this.id = id;
-        this.petName = petName;
-        this.ownerName = ownerName;
-        this.species = species;
-        this.dob = dob;
-        this.consultations = consultations;
-        this.vaccines = vaccines;
-    }
 
     @Override
     public String toString() {
@@ -130,6 +121,8 @@ public class Pet {
                 ", ownerName='" + ownerName + '\'' +
                 ", species='" + species + '\'' +
                 ", dob=" + dob +
+                ", consultations=" + consultations +
+                ", vaccines=" + vaccines +
                 '}';
     }
 }
