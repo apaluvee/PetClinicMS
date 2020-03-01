@@ -1,16 +1,16 @@
 package ee.sda.dao;
 
+import ee.sda.db.DatabaseUtil;
 import ee.sda.entities.Pet;
+import org.hibernate.Session;
 
 import java.time.LocalDate;
-
 
 public class PetDAO extends AbstractDAO<Pet, Integer> {
 
     public PetDAO() {
         super(Pet.class);
     }
-
 
     public Pet createPet(String species,String petName, String ownerName, LocalDate dob) {
         return save(new Pet(species, petName, ownerName, dob));
@@ -28,5 +28,5 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         return pet;
     }
 
+    }
 
-}
