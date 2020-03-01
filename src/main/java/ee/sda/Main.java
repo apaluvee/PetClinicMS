@@ -28,8 +28,9 @@ public class Main {
         System.out.println(veterinarian);*/
 
 
-        /*PetDAO petDAO = new PetDAO();
-        LocalDate localDate = LocalDate.of(2012, 11, 11);
+       //CREATE
+        PetDAO petDAO = new PetDAO();
+        /*LocalDate localDate = LocalDate.of(2012, 11, 11);
         Pet pet = petDAO.createPet("Afador", "Bingo", "Kaia", localDate);
         System.out.println(pet);
         Pet pet1 = petDAO.createPet("Barbet", "Barby", "James",
@@ -42,25 +43,27 @@ public class Main {
                 localDate.plus(3, ChronoUnit.YEARS).minus(6, ChronoUnit.MONTHS).plus(11, ChronoUnit.DAYS));
         System.out.println(pet3);*/
 
+        /*LocalDate localDate = LocalDate.of(2013, 05, 22);
+        Pet pet = petDAO.createPet("Labrador", "Fuzzy", "Leo", localDate);
+        System.out.println(pet);*/
+
+
+        //READ
         /*PetDAO petDAO = new PetDAO();
         Pet pet = petDAO.findPet(1);
         System.out.println(pet);*/
 
 
 
-        PetDAO petDAO = new PetDAO();
 
-        LocalDate localDate = LocalDate.of(2013, 05, 22);
-        Pet pet = petDAO.createPet("Labrador", "Fuzzy", "Leo", localDate);
-        System.out.println(pet);
-
-
+        //UPDATE
        /* Pet petUpdate = petDAO.updatePet(1,"Afador", "Puffy", "Kaia", LocalDate.of(2012, 11, 11));
         System.out.println(petUpdate);*/
 
-       Pet petUpdate = petDAO.updatePet(5,"Afador", "Tuffy", "Karl", LocalDate.of(2012, 11, 11));
+       Pet petUpdate = petDAO.updatePet(14,"Chi Chi", "Chikky", "Mary", LocalDate.of(2020, 01, 01));
         System.out.println(petUpdate);
 
+        //DELETE
         //Pet deletePet = petDAO.deletePet(5);
 
 
