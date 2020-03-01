@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        DatabaseUtil.getSessionFactory();
+        DatabaseUtil.init();
 
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
