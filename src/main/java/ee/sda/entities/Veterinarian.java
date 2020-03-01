@@ -44,6 +44,10 @@ public class Veterinarian {
         this.last_name = last_name;
     }
 
+    public Veterinarian(String first_name, String last_name, String address, String speciality, String email, String phone) {
+    }
+
+
     public int getId() {
         return id;
     }

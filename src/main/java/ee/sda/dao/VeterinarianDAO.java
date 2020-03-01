@@ -8,4 +8,14 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
         super(Veterinarian.class);
     }
 
+    public Veterinarian createVeterinarian(String first_name, String last_name, String address, String speciality, String email, String phone) {
+        return save(new Veterinarian(first_name, last_name, address, speciality, email, phone));
+    }
+
+    public void updateVeterinarian(int id, String first_name, String last_name, String address, String speciality, String email, String phone) {
+        Veterinarian veterinarian = find(id);
+    }
+
+
+
 }

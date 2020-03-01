@@ -17,12 +17,15 @@ public class Main {
 
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
-        Veterinarian veterinarian =  new Veterinarian("Kaja", "Bold");
 
-        veterinarian.setEmail("kaja.bold@gmail");
-        veterinarian.setAddress("tartu");
-        veterinarian = veterinarianDAO.save(veterinarian);
-        System.out.println(veterinarian);
+
+        //veterinarian.setEmail("kaja.bold@gmail");
+        //veterinarian.setAddress("tartu");
+
+        veterinarianDAO.find(1).setEmail("test");
+        //veterinarian = veterinarianDAO.save(veterinarian);
+        //System.out.println(veterinarian);
+        veterinarianDAO.updateVeterinarian(1,"a","b","c","s","@","555");
 
 
 
