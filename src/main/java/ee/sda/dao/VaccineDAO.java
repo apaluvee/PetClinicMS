@@ -1,6 +1,6 @@
 package ee.sda.dao;
 
-import ee.sda.Entities.Vaccine;
+import ee.sda.entities.Vaccine;
 
 public class VaccineDAO extends AbstractDAO<Vaccine, String> {
 

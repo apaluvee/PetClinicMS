@@ -1,6 +1,6 @@
 package ee.sda.dao;
 
-import ee.sda.Entities.Pet;
+import ee.sda.entities.Pet;
 
 public class PetDAO extends AbstractDAO<Pet, String> {
 

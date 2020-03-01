@@ -1,4 +1,4 @@
-package ee.sda.Entities;
+package ee.sda.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;

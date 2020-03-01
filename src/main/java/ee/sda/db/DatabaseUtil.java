@@ -1,9 +1,9 @@
 package ee.sda.db;
 
-import ee.sda.Entities.Consultation;
-import ee.sda.Entities.Pet;
-import ee.sda.Entities.Vaccine;
-import ee.sda.Entities.Veterinarian;
+import ee.sda.entities.Consultation;
+import ee.sda.entities.Pet;
+import ee.sda.entities.Vaccine;
+import ee.sda.entities.Veterinarian;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

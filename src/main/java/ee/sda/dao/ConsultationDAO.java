@@ -1,6 +1,6 @@
 package ee.sda.dao;
 
-import ee.sda.Entities.Consultation;
+import ee.sda.entities.Consultation;
 
 public class ConsultationDAO extends AbstractDAO<Consultation, String > {
     public ConsultationDAO() {
