@@ -22,7 +22,7 @@ public class Main {
         //veterinarian.setEmail("kaja.bold@gmail");
         //veterinarian.setAddress("tartu");
 
-        veterinarianDAO.find(1).setEmail("test");
+        //veterinarianDAO.find(1).setEmail("test");
         //veterinarian = veterinarianDAO.save(veterinarian);
         //System.out.println(veterinarian);
         veterinarianDAO.updateVeterinarian(1,"a","b","c","s","@","555");

@@ -14,6 +14,15 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
 
     public void updateVeterinarian(int id, String first_name, String last_name, String address, String speciality, String email, String phone) {
         Veterinarian veterinarian = find(id);
+        veterinarian.setFirst_name(first_name);
+        veterinarian.setLast_name(last_name);
+        veterinarian.setAddress(address);
+        veterinarian.setSpeciality(speciality);
+        veterinarian.setEmail(email);
+        veterinarian.setPhone(phone);
+
+        update(veterinarian);
+
     }
 
 
