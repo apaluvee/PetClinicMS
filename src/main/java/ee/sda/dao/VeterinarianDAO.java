@@ -25,6 +25,11 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
 
     }
 
+    public void deleteVeterinarian(int id) {
+        Veterinarian veterinarian = find(id);
+        delete(veterinarian);
+    }
+
 
 
 }

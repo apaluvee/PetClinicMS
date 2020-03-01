@@ -15,6 +15,25 @@ public class Main {
 
     public static void main(String[] args) {
 
+        DatabaseUtil.init();
+
+        VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
+        //veterinarian.setEmail("kaja.bold@gmail");
+        //veterinarian.setAddress("tartu");
+
+        //veterinarianDAO.find(1).setEmail("test");
+        //veterinarian = veterinarianDAO.save(veterinarian);
+        //System.out.println(veterinarian);
+        //veterinarianDAO.updateVeterinarian(1,"a","b","c","s","@","555");
+
+        veterinarianDAO.deleteVeterinarian(11);
+
+
+        //create consultation
+        /*ConsultationDAO consultationDAO = new ConsultationDAO();
+        LocalDate date = LocalDate.now();
+        consultationDAO.createConsultation(date,"description",2,2);*/
+
     }
 
 
