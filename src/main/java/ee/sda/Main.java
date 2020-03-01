@@ -1,9 +1,14 @@
 package ee.sda;
 
 
+import ee.sda.dao.PetDAO;
 import ee.sda.dao.VeterinarianDAO;
-import ee.sda.entities.Veterinarian;
 import ee.sda.db.DatabaseUtil;
+import ee.sda.entities.Pet;
+import ee.sda.entities.Veterinarian;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Main {
 
@@ -15,22 +20,32 @@ public class Main {
 
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
-        Veterinarian veterinarian =  new Veterinarian("Kaja", "Bold");
-
-
+       /* Veterinarian veterinarian = new Veterinarian("Kaja", "Bold");
 
         veterinarian.setEmail("kaja.bold@gmail");
         veterinarian.setAddress("tartu");
         veterinarian = veterinarianDAO.save(veterinarian);
-        System.out.println(veterinarian);
+        System.out.println(veterinarian);*/
 
 
+        /*PetDAO petDAO = new PetDAO();
+        LocalDate localDate = LocalDate.of(2012, 11, 11);
+        Pet pet = petDAO.createPet("Afador", "Bingo", "Kaia", localDate);
+        System.out.println(pet);
+        Pet pet1 = petDAO.createPet("Barbet", "Barby", "James",
+                localDate.plus(2, ChronoUnit.YEARS).minus(2, ChronoUnit.MONTHS).plus(5, ChronoUnit.DAYS));
+        System.out.println(pet1);
+        Pet pet2 = petDAO.createPet("Cavador", "Woofy", "Bianca",
+                localDate.plus(4, ChronoUnit.YEARS).minus(4, ChronoUnit.MONTHS).plus(10, ChronoUnit.DAYS));
+        System.out.println(pet2);
+        Pet pet3 = petDAO.createPet("Daniff", "Snoopy", "Kane",
+                localDate.plus(3, ChronoUnit.YEARS).minus(6, ChronoUnit.MONTHS).plus(11, ChronoUnit.DAYS));
+        System.out.println(pet3);*/
 
-
-
-
+        PetDAO petDAO = new PetDAO();
+        Pet pet = petDAO.findPet(1);
+        System.out.println(pet);
     }
-
 
 
 }

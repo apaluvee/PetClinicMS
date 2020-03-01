@@ -21,10 +21,22 @@ public class Consultation {
     private String consultDescription;
 
     @OneToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
 
     @OneToOne
+    @JoinColumn(name =  "vet_id")
     private Veterinarian veterinarian;
+
+    public Consultation( LocalDate consultDate, String consultDescription, Pet pet, Veterinarian veterinarian) {
+        this.consultDate = consultDate;
+        this.consultDescription = consultDescription;
+        this.pet = pet;
+        this.veterinarian = veterinarian;
+    }
+
+    public Consultation() {
+    }
 
     public int getId() {
         return id;

@@ -2,11 +2,12 @@ package ee.sda.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Pet")
+@Table(name = "pet")
 
 public class Pet {
     @Id
@@ -27,6 +28,7 @@ public class Pet {
     private LocalDate dob;
 
     @OneToMany
+    @JoinColumn(name = "pet_id")
     private List<Consultation> consultations;
 
     @ManyToMany
@@ -34,9 +36,15 @@ public class Pet {
     private List<Vaccine> vaccines;
 
 
-    public Pet(String petName, String ownerName) {
+    public Pet(String petName, String ownerName, String species, LocalDate dob) {
         this.petName = petName;
         this.ownerName = ownerName;
+        this.species = species;
+        this.dob = dob;
+    }
+
+    public Pet() {
+
     }
 
     public int getId() {
@@ -112,6 +120,8 @@ public class Pet {
                 ", ownerName='" + ownerName + '\'' +
                 ", species='" + species + '\'' +
                 ", dob=" + dob +
+                ", consultations=" + consultations +
+                ", vaccines=" + vaccines +
                 '}';
     }
 }

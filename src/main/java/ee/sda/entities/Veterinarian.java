@@ -33,16 +33,22 @@ public class Veterinarian {
     private String phone;
 
     @OneToMany
-    @JoinColumn(name = "consult_id")
+   @JoinColumn(name = "consult_id")
+   // @JoinColumn(name = "vet_id")
     private List<Consultation> consultations;
 
     public Veterinarian() {
     }
 
-    public Veterinarian(String first_name, String last_name) {
+    public Veterinarian(String first_name, String last_name, String address, String speciality, String email, String phone) {
         this.first_name = first_name;
         this.last_name = last_name;
+        this.address = address;
+        this.speciality = speciality;
+        this.email = email;
+        this.phone = phone;
     }
+
 
     public int getId() {
         return id;
