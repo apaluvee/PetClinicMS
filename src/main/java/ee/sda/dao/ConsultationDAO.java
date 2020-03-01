@@ -1,11 +1,16 @@
 package ee.sda.dao;
 
 import ee.sda.entities.Consultation;
+import ee.sda.entities.Pet;
 
-public class ConsultationDAO extends AbstractDAO<Consultation, String > {
+import java.time.LocalDate;
+
+public class ConsultationDAO extends AbstractDAO<Consultation, Integer > {
+
     public ConsultationDAO() {
         super(Consultation.class);
     }
+
 
 
 }

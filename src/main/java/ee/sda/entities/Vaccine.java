@@ -28,6 +28,9 @@ public class Vaccine {
         this.vaccine_description = vaccine_description;
     }
 
+    public Vaccine() {
+    }
+
     public int getId() {
         return vaccine_id;
     }
