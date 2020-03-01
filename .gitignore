@@ -1,3 +1,4 @@
 .idea/
 petclinicms.iml
 target/
+src/main/java/ee/sda/db/DatabaseUtil
