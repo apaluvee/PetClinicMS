@@ -46,11 +46,27 @@ public class Main {
         Pet pet = petDAO.findPet(1);
         System.out.println(pet);*/
 
+
+
         PetDAO petDAO = new PetDAO();
-        Pet petUpdate = petDAO.updatePet(1,"Afador", "Puffy", "Kaia", LocalDate.of(2012, 11, 11));
+
+        LocalDate localDate = LocalDate.of(2013, 05, 22);
+        Pet pet = petDAO.createPet("Labrador", "Fuzzy", "Leo", localDate);
+        System.out.println(pet);
+
+
+       /* Pet petUpdate = petDAO.updatePet(1,"Afador", "Puffy", "Kaia", LocalDate.of(2012, 11, 11));
+        System.out.println(petUpdate);*/
+
+       Pet petUpdate = petDAO.updatePet(5,"Afador", "Tuffy", "Karl", LocalDate.of(2012, 11, 11));
         System.out.println(petUpdate);
+
+        //Pet deletePet = petDAO.deletePet(5);
+
+
+
     }
-    //...
+
 
 
 }
