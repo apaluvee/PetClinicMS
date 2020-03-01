@@ -42,9 +42,13 @@ public class Main {
                 localDate.plus(3, ChronoUnit.YEARS).minus(6, ChronoUnit.MONTHS).plus(11, ChronoUnit.DAYS));
         System.out.println(pet3);*/
 
-        PetDAO petDAO = new PetDAO();
+        /*PetDAO petDAO = new PetDAO();
         Pet pet = petDAO.findPet(1);
-        System.out.println(pet);
+        System.out.println(pet);*/
+
+        PetDAO petDAO = new PetDAO();
+        Pet petUpdate = petDAO.updatePet(1,"Afador", "Puffy", "Kaia", LocalDate.of(2012, 11, 11));
+        System.out.println(petUpdate);
     }
 
 
