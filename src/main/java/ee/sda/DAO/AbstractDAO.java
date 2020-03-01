@@ -1,11 +1,18 @@
-package ee.sda;
+package ee.sda.DAO;
 
-import ee.sda.DB.DatabaseUtil;
+import ee.sda.db.DatabaseUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
+
+
+/**
+ *
+ * @param <T>  Entity
+ * @param <K>  Returned key
+ */
 
 public abstract class AbstractDAO <T, K> {
 

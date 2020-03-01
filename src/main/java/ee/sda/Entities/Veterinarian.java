@@ -1,4 +1,4 @@
-package ee.sda;
+package ee.sda.Entities;
 
 import javax.persistence.*;
 import java.util.List;

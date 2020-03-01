@@ -1,7 +1,9 @@
 package ee.sda;
 
 
-import ee.sda.DB.DatabaseUtil;
+import ee.sda.DAO.VeterinarianDAO;
+import ee.sda.Entities.Veterinarian;
+import ee.sda.db.DatabaseUtil;
 
 public class Main {
 
@@ -12,10 +14,9 @@ public class Main {
         DatabaseUtil.getSessionFactory();
 
 
-        VeterinarianDAO veterinarianDAO = new VeterinarianDAO(Veterinarian.class);
-        //Veterinarian veterinarian = (Veterinarian) veterinarianDAO.save(veterinarianDAO);
+        VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
         Veterinarian veterinarian =  new Veterinarian("Kaja", "Bold");
-        veterinarian = (Veterinarian) veterinarianDAO.save(veterinarian);
+        veterinarian = veterinarianDAO.save(veterinarian);
         System.out.println(veterinarian);
 
 
