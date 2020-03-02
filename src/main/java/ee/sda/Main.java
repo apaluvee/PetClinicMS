@@ -41,7 +41,7 @@ public class Main {
 
         LocalDate localDate = LocalDate.of(2020, 04, 13);
         Consultation consultation = consultationDAO.createConsultation(localDate, "This parrot needs a flu vaccine", petLIST, vetLIST);
-
+        System.out.println(consultation);
 
         /*LocalDate localDate = LocalDate.of(2012, 11, 11);
         Pet pet = petDAO.createPet("Afador", "Bingo", "Kaia", localDate);
@@ -134,6 +134,7 @@ public class Main {
         System.out.println(veterinarian);*/
 
 
+       DatabaseUtil.shutdown();
 
     }
 

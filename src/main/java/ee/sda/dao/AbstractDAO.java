@@ -5,7 +5,9 @@ import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import javax.persistence.criteria.CriteriaQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 

@@ -48,7 +48,7 @@ public class DatabaseUtil {
 
     }
 
-    static void shutdown() {
+    public static void shutdown() {
         if (sessionFactory != null) {
             sessionFactory.close();
         }
