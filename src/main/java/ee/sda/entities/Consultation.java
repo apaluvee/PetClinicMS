@@ -38,6 +38,7 @@ public class Consultation {
     public Consultation() {
     }
 
+
     public int getId() {
         return id;
     }
