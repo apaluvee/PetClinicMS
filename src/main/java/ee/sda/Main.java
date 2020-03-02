@@ -37,9 +37,7 @@ public class Main {
         for (Veterinarian veterinarian : allVeterinarians) {
             System.out.println(veterinarian);
         }
-        
 
     }
-
 
 }
