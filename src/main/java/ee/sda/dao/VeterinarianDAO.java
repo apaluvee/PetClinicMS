@@ -30,6 +30,11 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
         delete(veterinarian);
     }
 
+    public Veterinarian findVeterinarian(int id) {
+        Veterinarian veterinarian = find(id);
+        return veterinarian;
+    }
+
 
 
 }

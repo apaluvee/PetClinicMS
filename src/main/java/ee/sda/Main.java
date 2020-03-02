@@ -26,13 +26,14 @@ public class Main {
         //System.out.println(veterinarian);
         //veterinarianDAO.updateVeterinarian(1,"a","b","c","s","@","555");
 
-        veterinarianDAO.deleteVeterinarian(11);
-
-
         //create consultation
         /*ConsultationDAO consultationDAO = new ConsultationDAO();
         LocalDate date = LocalDate.now();
         consultationDAO.createConsultation(date,"description",2,2);*/
+
+        //veterinarianDAO.deleteVeterinarian(11);
+
+        System.out.println(veterinarianDAO.findVeterinarian(2));
 
     }
 
