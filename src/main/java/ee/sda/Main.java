@@ -9,6 +9,7 @@ import ee.sda.entities.Veterinarian;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 
 public class Main {
 
@@ -18,13 +19,10 @@ public class Main {
         DatabaseUtil.init();
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
-        //veterinarian.setEmail("kaja.bold@gmail");
-        //veterinarian.setAddress("tartu");
 
-        //veterinarianDAO.find(1).setEmail("test");
         //veterinarian = veterinarianDAO.save(veterinarian);
         //System.out.println(veterinarian);
-        //veterinarianDAO.updateVeterinarian(1,"a","b","c","s","@","555");
+        //veterinarianDAO.updateVeterinarian(6,"Ott","Sepp","Tartu","Vaccine specialist","ott.sepp@vet.com","556");
 
         //create consultation
         /*ConsultationDAO consultationDAO = new ConsultationDAO();
@@ -33,7 +31,13 @@ public class Main {
 
         //veterinarianDAO.deleteVeterinarian(11);
 
-        System.out.println(veterinarianDAO.findVeterinarian(2));
+        //System.out.println(veterinarianDAO.findVeterinarian(2));
+
+        List<Veterinarian> allVeterinarians = veterinarianDAO.findAll();
+        for (Veterinarian veterinarian : allVeterinarians) {
+            System.out.println(veterinarian);
+        }
+        
 
     }
 
