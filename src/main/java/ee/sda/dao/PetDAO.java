@@ -3,6 +3,7 @@ package ee.sda.dao;
 import ee.sda.entities.Pet;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 
 public class PetDAO extends AbstractDAO<Pet, Integer> {
@@ -35,6 +36,11 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         Pet pet = find(id);
         delete(pet);
         return pet;
+    }
+
+    public ArrayList<Pet> findALLPets() {
+        ArrayList<Pet> allPets = findAll();
+        return allPets;
     }
 
 

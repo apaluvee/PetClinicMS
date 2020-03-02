@@ -91,10 +91,10 @@ public abstract class AbstractDAO <T, K> {
         return object;
     }
 
-    // public List<SpecificCLASS> findAll()
-    public List<T> findAll() {
+    // public ArrayList<SpecificCLASS> findAll()
+    public ArrayList<T> findAll() {
         Session session = DatabaseUtil.getSessionFactory().openSession();
-        return session.createCriteria(entityClazz).list();
+        return (ArrayList<T>) session.createCriteria(entityClazz).list();
         // return session.createCriteria(Job.class).list()
     }
 }

@@ -26,9 +26,10 @@ public class DatabaseUtil {
             properties.put(Environment.USER, "sekbodb");
             properties.put(Environment.PASS, "sekbo2018");
             properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
-            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+            //properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             properties.put(Environment.HBM2DDL_AUTO, "none");
             properties.put(Environment.SHOW_SQL, true);
+            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "jta");
             configuration.addAnnotatedClass(Veterinarian.class);
             configuration.addAnnotatedClass(Pet.class);
             configuration.addAnnotatedClass(Vaccine.class);
