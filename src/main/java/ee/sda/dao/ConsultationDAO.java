@@ -2,9 +2,11 @@ package ee.sda.dao;
 
 import ee.sda.entities.Consultation;
 import ee.sda.entities.Pet;
+import ee.sda.entities.Vaccine;
 import ee.sda.entities.Veterinarian;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class ConsultationDAO extends AbstractDAO<Consultation, Integer > {
 
@@ -34,6 +36,11 @@ public class ConsultationDAO extends AbstractDAO<Consultation, Integer > {
         Consultation consultation = find(consult_id);
         delete(consultation);
         return consultation;
+    }
+
+    public ArrayList<Consultation> findALLConsults() {
+        ArrayList<Consultation> allConsults = findAll();
+        return allConsults;
     }
 
 

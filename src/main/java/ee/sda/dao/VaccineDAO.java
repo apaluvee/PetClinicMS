@@ -4,6 +4,7 @@ import ee.sda.entities.Pet;
 import ee.sda.entities.Vaccine;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class VaccineDAO extends AbstractDAO<Vaccine, Integer> {
 
@@ -35,5 +36,9 @@ public class VaccineDAO extends AbstractDAO<Vaccine, Integer> {
         return vaccine;
     }
 
+    public ArrayList<Vaccine> findALLVaccines() {
+        ArrayList<Vaccine> allVaccines = findAll();
+        return allVaccines;
+    }
 
 }

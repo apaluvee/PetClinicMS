@@ -4,6 +4,7 @@ import ee.sda.entities.Pet;
 import ee.sda.entities.Veterinarian;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
 
@@ -36,6 +37,11 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
         Veterinarian vet = find(id);
         delete(vet);
         return vet;
+    }
+
+    public ArrayList<Veterinarian> findALLVets() {
+        ArrayList<Veterinarian> allVets = findAll();
+        return allVets;
     }
 
 }
