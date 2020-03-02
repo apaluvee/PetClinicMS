@@ -4,6 +4,7 @@ import ee.sda.entities.Consultation;
 import ee.sda.entities.Pet;
 import ee.sda.entities.Vaccine;
 import ee.sda.entities.Veterinarian;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
