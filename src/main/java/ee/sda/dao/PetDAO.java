@@ -31,5 +31,12 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         return pet;
     }
 
+    public Pet deletePet(int id) {
+        Pet pet = find(id);
+        delete(pet);
+        return pet;
+    }
+
+
 
 }

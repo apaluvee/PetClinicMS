@@ -75,6 +75,7 @@ public abstract class AbstractDAO <T, K> {
 
             transaction.commit();
             session.close();
+            System.out.println("Deleted successfully!");
         } catch (HibernateException e) {
             transaction.rollback();
         }
