@@ -167,6 +167,7 @@ public class Main {
         System.out.println(veterinarianUpdater + " was deleted successfully!");*/
 
 
+
        DatabaseUtil.shutdown();
 
     }
