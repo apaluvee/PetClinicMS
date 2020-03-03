@@ -61,6 +61,7 @@ public class Main {
         /*Consultation consultUpdate  = consultationDAO.updateConsultation(6,localDateConsult,"Reduce this dogs ears...");
         System.out.println(consultUpdate);*/
 
+
         //DELETE
        /* Consultation consultDelete  = consultationDAO.deleteConsultation(11);
         System.out.println(consultDelete + " was deleted successfully!");*/
@@ -96,13 +97,13 @@ public class Main {
         System.out.println(petALL);*/
 
 
-
         //UPDATE
        /* Pet petUpdate = petDAO.updatePet(1,"Afador", "Puffy", "Kaia", LocalDate.of(2012, 11, 11));
         System.out.println(petUpdate);*/
 
        /*Pet petUpdate = petDAO.updatePet(14,"Chi Chi", "Chikky", "Mary", LocalDate.of(2020, 01, 01));
         System.out.println(petUpdate);*/
+
 
         //DELETE
         /*Pet deletePet = petDAO.deletePet(5);
@@ -135,10 +136,10 @@ public class Main {
         /*Vaccine vaccineUpdater = vaccineDAO.updateVaccine(7,"Fur retainer","Makes furs grow well in animals");
         System.out.println(vaccineUpdater);*/
 
+
         //DELETE
         /*Vaccine vaccineDeleter = vaccineDAO.deleteVaccine(5);
         System.out.println(vaccineDeleter + " was deleted successfully!");*/
-
 
 
 
@@ -162,6 +163,7 @@ public class Main {
         //UPDATE
         Veterinarian veterinarianUpdater = veterinarianDAO.updateVet(5,"Kaja","Bold", "Tartu","Cardiology", "kaja.bold@email.go","99772210");
         System.out.println(veterinarianUpdater);
+
 
         //DELETE
         /*Veterinarian veterinarianUpdater = veterinarianDAO.deleteVaccine(5);
