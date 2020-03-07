@@ -1,7 +1,9 @@
 package ee.sda;
 
 
+import ee.sda.dao.ConsultationDAO;
 import ee.sda.dao.PetDAO;
+import ee.sda.dao.VaccineDAO;
 import ee.sda.dao.VeterinarianDAO;
 import ee.sda.db.DatabaseUtil;
 import ee.sda.entities.Pet;
@@ -17,6 +19,13 @@ public class Main {
     public static void main(String[] args) {
 
         DatabaseUtil.init();
+        /**   ALL DAOs  **/
+
+        ConsultationDAO consultationDAO = new ConsultationDAO();
+
+        PetDAO petDAO = new PetDAO();
+
+        VaccineDAO vaccineDAO = new VaccineDAO();
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
 
