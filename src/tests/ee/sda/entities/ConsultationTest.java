@@ -1,15 +1,26 @@
 package ee.sda.entities;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ConsultationTest {
 
-    Consultation consultation = new Consultation();
+    private final Consultation  constTests = new Consultation();
+
     @Test
     void getId() {
-        consultation.getId()
+        /*// given
+        Calculator calculator = new Calculator();
+
+        // when
+        int result = calculator.sum(4, 7);
+
+        // then
+        assertThat(result).isEqualTo(11);
+        // assertEquals(11,result);
+        assert result == 11;*/
     }
 
     @Test
