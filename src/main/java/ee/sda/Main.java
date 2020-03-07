@@ -1,10 +1,7 @@
 package ee.sda;
 
 
-<<<<<<< HEAD
-=======
 import ee.sda.dao.ConsultationDAO;
->>>>>>> 17b2eb25d044fb6a7be83a1ee2d836a5c7270d48
 import ee.sda.dao.PetDAO;
 import ee.sda.dao.VaccineDAO;
 import ee.sda.dao.VeterinarianDAO;

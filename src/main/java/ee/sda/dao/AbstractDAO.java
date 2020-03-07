@@ -6,17 +6,8 @@ import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-<<<<<<< HEAD
-import org.hibernate.query.Query;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-=======
-import javax.persistence.criteria.CriteriaQuery;
 
 import java.util.ArrayList;
->>>>>>> 17b2eb25d044fb6a7be83a1ee2d836a5c7270d48
 import java.util.List;
 
 
@@ -101,9 +92,11 @@ public abstract class AbstractDAO <T, K> {
     }
 
     // public ArrayList<SpecificCLASS> findAll()
-    public ArrayList<T> findAll() {
+    /*public ArrayList<T> findAll() {
         Session session = DatabaseUtil.getSessionFactory().openSession();
 
-        // return session.createCriteria(Job.class).list()
+         //return session.createCriteria(entityClazz.class).list();
+
+
+     */
     }
-}

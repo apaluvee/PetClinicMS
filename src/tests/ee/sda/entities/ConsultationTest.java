@@ -1,5 +1,4 @@
-package ee.sda.entities;
-
+import ee.sda.entities.Consultation;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConsultationTest {
 
-    private final Consultation  constTests = new Consultation();
+    private final Consultation constTests = new Consultation();
 
     @Test
     void getId() {
