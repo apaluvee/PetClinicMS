@@ -20,28 +20,6 @@ public class Main {
 
         VeterinarianDAO veterinarianDAO = new VeterinarianDAO();
 
-        //veterinarian = veterinarianDAO.save(veterinarian);
-        //System.out.println(veterinarian);
-        //veterinarianDAO.updateVeterinarian(6,"Ott","Sepp","Tartu","Vaccine specialist","ott.sepp@vet.com","556");
-
-        //create consultation
-        /*ConsultationDAO consultationDAO = new ConsultationDAO();
-        LocalDate date = LocalDate.now();
-        consultationDAO.createConsultation(date,"description",2,2);*/
-
-        //veterinarianDAO.deleteVeterinarian(11);
-
-        //System.out.println(veterinarianDAO.findVeterinarian(2));
-
-        List<Veterinarian> allVeterinarians = veterinarianDAO.findAll();
-        for (Veterinarian veterinarian : allVeterinarians) {
-            System.out.println(veterinarian);
-        }
-
-
-
-<<<<<<< HEAD
-=======
         /**   VACCINE  **/
         //CREATE
         /*Vaccine vaccine = vaccineDAO.createVaccine("Cough killer","Stop cough in animals");
@@ -105,7 +83,6 @@ public class Main {
 
        DatabaseUtil.shutdown();
 
->>>>>>> john
     }
 
 }
