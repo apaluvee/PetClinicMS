@@ -24,8 +24,6 @@ public class Main {
 
         DatabaseUtil.init();
 
-
-
         /**   ALL DAOs  **/
 
         ConsultationDAO consultationDAO = new ConsultationDAO();
