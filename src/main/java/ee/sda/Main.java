@@ -171,6 +171,7 @@ public class Main {
 
 
 
+
        DatabaseUtil.shutdown();
 
     }
