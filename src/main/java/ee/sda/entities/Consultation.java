@@ -9,6 +9,7 @@ import java.util.Objects;
 
 public class Consultation {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="consult_id")
@@ -25,8 +26,10 @@ public class Consultation {
     private Pet pet;
 
     @OneToOne
-    @JoinColumn(name =  "vet_id")
+    @JoinColumn(name = "vet_id")
     private Veterinarian veterinarian;
+
+
 
     public Consultation( LocalDate consultDate, String consultDescription, Pet pet, Veterinarian veterinarian) {
         this.consultDate = consultDate;
@@ -37,6 +40,7 @@ public class Consultation {
 
     public Consultation() {
     }
+
 
     public int getId() {
         return id;
@@ -101,6 +105,7 @@ public class Consultation {
                 "id=" + id +
                 ", consultDate=" + consultDate +
                 ", consultDescription='" + consultDescription + '\'' +
+                ", pet=" + pet +
                 ", veterinarian=" + veterinarian +
                 '}';
     }

@@ -33,8 +33,8 @@ public class Veterinarian {
     private String phone;
 
     @OneToMany
-   @JoinColumn(name = "consult_id")
-   // @JoinColumn(name = "vet_id")
+    @JoinColumn(name = "consult_id")
+    // @JoinColumn(name = "vet_id")
     private List<Consultation> consultations;
 
     public Veterinarian() {

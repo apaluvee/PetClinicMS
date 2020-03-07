@@ -6,11 +6,17 @@ import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+<<<<<<< HEAD
 import org.hibernate.query.Query;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+=======
+import javax.persistence.criteria.CriteriaQuery;
+
+import java.util.ArrayList;
+>>>>>>> 17b2eb25d044fb6a7be83a1ee2d836a5c7270d48
 import java.util.List;
 
 
@@ -62,6 +68,7 @@ public abstract class AbstractDAO <T, K> {
             transaction.commit();
         } catch (HibernateException e) {
             transaction.rollback();
+            e.printStackTrace();
         }
 
     }
@@ -78,29 +85,25 @@ public abstract class AbstractDAO <T, K> {
             session.delete(object);
 
             transaction.commit();
+            session.close();
+            System.out.println("Deleted successfully!");
         } catch (HibernateException e) {
             transaction.rollback();
         }
+
     }
 
     public T find(K id) {
         Session session = DatabaseUtil.getSessionFactory().openSession();
         T object = session.find(entityClazz, id);
+        session.close();
         return object;
     }
 
-    // public List<SpecificCLASS> findAll()
-    public List<T> findAll() {
+    // public ArrayList<SpecificCLASS> findAll()
+    public ArrayList<T> findAll() {
         Session session = DatabaseUtil.getSessionFactory().openSession();
-        /*CriteriaBuilder criteriaBuilder=session.getCriteriaBuilder();
-        CriteriaQuery<Vaccine> criteriaBuilderQuery=criteriaBuilder.createQuery(Vaccine.class);
-        Root<Vaccine> root=criteriaBuilderQuery.from(Vaccine.class);
-        criteriaBuilderQuery.select(root);
 
-        return findAll();
-
-         */
-        return session.createCriteria(entityClazz).list();
         // return session.createCriteria(Job.class).list()
     }
 }
