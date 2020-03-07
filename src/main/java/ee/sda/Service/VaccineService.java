@@ -10,5 +10,5 @@ public class VaccineService {
         VaccineName = vaccineName;
         VaccineDescription = vaccineDescription;
     }
-    
+
 }
