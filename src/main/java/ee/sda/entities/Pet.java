@@ -1,5 +1,7 @@
 package ee.sda.entities;
 
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "pet")
-
+@ToString(exclude = "consultations")
 public class Pet {
     @Id
     @Column(name = "pet_id")
@@ -111,7 +113,7 @@ public class Pet {
     public int hashCode() {
         return Objects.hash(id, petName, ownerName, species, dob);
     }
-
+/*
 
     @Override
     public String toString() {
@@ -124,5 +126,5 @@ public class Pet {
                 ", consultations=" + consultations +
                 ", vaccines=" + vaccines +
                 '}';
-    }
+    }*/
 }
