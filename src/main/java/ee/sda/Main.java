@@ -6,6 +6,7 @@ import ee.sda.dao.PetDAO;
 import ee.sda.dao.VaccineDAO;
 import ee.sda.dao.VeterinarianDAO;
 import ee.sda.db.DatabaseUtil;
+import ee.sda.dto.PetDTO;
 import ee.sda.entities.Pet;
 import ee.sda.entities.Veterinarian;
 
@@ -162,6 +163,7 @@ public class Main {
         //DELETE
         /*Veterinarian veterinarianUpdater = veterinarianDAO.deleteVaccine(5);
         System.out.println(veterinarianUpdater + " was deleted successfully!");*/
+
 
 
 
