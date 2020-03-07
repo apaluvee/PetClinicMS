@@ -1,6 +1,5 @@
 package ee.sda.dto;
 
-import com.google.gson.Gson;
 import ee.sda.entities.Veterinarian;
 
 import java.util.HashMap;
@@ -26,8 +25,4 @@ public class VeterinarianDTO {
 
     }
 
-    public String getJson() {
-        Gson gson = new Gson();
-        return gson.toJson(this);
-    }
 }

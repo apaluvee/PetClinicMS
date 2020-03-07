@@ -27,7 +27,7 @@ public abstract class AbstractDAO <T, K> {
 
     public T save(T object) {
         Transaction transaction = null;
-
+        System.out.println(object);
         try {
             Session session = DatabaseUtil.getSessionFactory().openSession();
             transaction = session.getTransaction();

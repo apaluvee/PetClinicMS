@@ -19,9 +19,9 @@ public class Vaccine {
 
     @Column(name = "vaccine_description")
     private String vaccine_description;
-
+/*
     @ManyToMany(mappedBy = "vaccines")
-    private List<Pet> pets;
+    private List<Pet> pets;*/
 
     public Vaccine(String vaccine_name, String vaccine_description) {
         this.vaccine_name = vaccine_name;

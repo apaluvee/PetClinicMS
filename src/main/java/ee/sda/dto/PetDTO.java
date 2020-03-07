@@ -1,5 +1,7 @@
 package ee.sda.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import ee.sda.entities.Pet;
 import lombok.Data;
 import lombok.Getter;
@@ -10,9 +12,10 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PetDTO extends BaseDTO {
 
-    int id;
+    Integer id;
     String petName;
     String ownerName;
     String species;
