@@ -13,6 +13,7 @@ public class ConsultationDAO extends AbstractDAO<Consultation, Integer > {
     }
 
     public Consultation createConsultation(LocalDate consultDate, String consultDescription, Integer petId, Integer VetId){
+        System.out.println("Called");
         PetDAO petDao= new PetDAO();
         Pet pet=petDao.find(petId);
         VeterinarianDAO veterinarianDAO=new VeterinarianDAO();
