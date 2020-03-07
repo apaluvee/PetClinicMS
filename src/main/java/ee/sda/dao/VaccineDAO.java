@@ -1,9 +1,5 @@
 package ee.sda.dao;
 
-<<<<<<< HEAD
-import ee.sda.db.DatabaseUtil;
-=======
->>>>>>> john
 import ee.sda.entities.Pet;
 import ee.sda.entities.Vaccine;
 import ee.sda.entities.Veterinarian;

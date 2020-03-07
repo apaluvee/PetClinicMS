@@ -13,7 +13,7 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         super(Pet.class);
     }
 
-    public Pet createPet(String species,String petName, String ownerName, LocalDate dob) {
+    public Pet createPet(String species, String petName, String ownerName, LocalDate dob) {
         return save(new Pet(species, petName, ownerName, dob));
     }
 
@@ -31,23 +31,6 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         Pet pet = find(id);
         return pet;
     }
-
-<<<<<<< HEAD
-    }
-
-=======
-    public Pet deletePet(int id) {
-        Pet pet = find(id);
-        delete(pet);
-        return pet;
-    }
-
-    public ArrayList<Pet> findALLPets() {
-        ArrayList<Pet> allPets = findAll();
-        return allPets;
-    }
-
-
-
 }
->>>>>>> john
+
+

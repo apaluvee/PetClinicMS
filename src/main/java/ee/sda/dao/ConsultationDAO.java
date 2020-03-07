@@ -2,10 +2,6 @@ package ee.sda.dao;
 
 import ee.sda.entities.Consultation;
 import ee.sda.entities.Pet;
-<<<<<<< HEAD
-=======
-import ee.sda.entities.Vaccine;
->>>>>>> john
 import ee.sda.entities.Veterinarian;
 
 import java.time.LocalDate;
