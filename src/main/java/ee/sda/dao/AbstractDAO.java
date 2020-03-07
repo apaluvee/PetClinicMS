@@ -1,11 +1,16 @@
 package ee.sda.dao;
 
 import ee.sda.db.DatabaseUtil;
+import ee.sda.entities.Vaccine;
 import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 
@@ -87,6 +92,14 @@ public abstract class AbstractDAO <T, K> {
     // public List<SpecificCLASS> findAll()
     public List<T> findAll() {
         Session session = DatabaseUtil.getSessionFactory().openSession();
+        /*CriteriaBuilder criteriaBuilder=session.getCriteriaBuilder();
+        CriteriaQuery<Vaccine> criteriaBuilderQuery=criteriaBuilder.createQuery(Vaccine.class);
+        Root<Vaccine> root=criteriaBuilderQuery.from(Vaccine.class);
+        criteriaBuilderQuery.select(root);
+
+        return findAll();
+
+         */
         return session.createCriteria(entityClazz).list();
         // return session.createCriteria(Job.class).list()
     }
