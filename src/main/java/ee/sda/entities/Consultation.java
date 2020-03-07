@@ -37,6 +37,20 @@ public class Consultation {
     @JoinColumn(name = "vet_id")
     private Veterinarian veterinarian;
 
+<<<<<<< HEAD
+=======
+    public Consultation( LocalDate consultDate, String consultDescription, Pet pet, Veterinarian veterinarian) {
+        this.consultDate = consultDate;
+        this.consultDescription = consultDescription;
+        this.pet = pet;
+        this.veterinarian = veterinarian;
+    }
+
+    public Consultation() {
+    }
+
+
+>>>>>>> john
     public int getId() {
         return id;
     }

@@ -5,7 +5,9 @@ import ee.sda.entities.Veterinarian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import javax.persistence.criteria.CriteriaQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -75,6 +77,7 @@ public abstract class AbstractDAO <T, K> {
 
             transaction.commit();
             session.close();
+            System.out.println("Deleted successfully!");
         } catch (HibernateException e) {
             transaction.rollback();
         }
@@ -88,10 +91,10 @@ public abstract class AbstractDAO <T, K> {
         return object;
     }
 
-    // public List<SpecificCLASS> findAll()
-    public List<T> findAll() {
+    // public ArrayList<SpecificCLASS> findAll()
+    public ArrayList<T> findAll() {
         Session session = DatabaseUtil.getSessionFactory().openSession();
-        return session.createCriteria(entityClazz).list();
+        return (ArrayList<T>) session.createCriteria(entityClazz).list();
         // return session.createCriteria(Job.class).list()
     }
 }

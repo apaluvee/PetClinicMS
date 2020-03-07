@@ -4,6 +4,7 @@ import ee.sda.entities.Consultation;
 import ee.sda.entities.Pet;
 import ee.sda.entities.Vaccine;
 import ee.sda.entities.Veterinarian;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -26,9 +27,10 @@ public class DatabaseUtil {
             properties.put(Environment.USER, "sekbodb");
             properties.put(Environment.PASS, "sekbo2018");
             properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
-            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+            //properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             properties.put(Environment.HBM2DDL_AUTO, "none");
             properties.put(Environment.SHOW_SQL, true);
+            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "jta");
             configuration.addAnnotatedClass(Veterinarian.class);
             configuration.addAnnotatedClass(Pet.class);
             configuration.addAnnotatedClass(Vaccine.class);
@@ -48,7 +50,7 @@ public class DatabaseUtil {
 
     }
 
-    static void shutdown() {
+    public static void shutdown() {
         if (sessionFactory != null) {
             sessionFactory.close();
         }

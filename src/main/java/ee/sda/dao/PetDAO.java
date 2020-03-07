@@ -5,6 +5,7 @@ import ee.sda.entities.Pet;
 import org.hibernate.Session;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class PetDAO extends AbstractDAO<Pet, Integer> {
 
@@ -31,5 +32,22 @@ public class PetDAO extends AbstractDAO<Pet, Integer> {
         return pet;
     }
 
+<<<<<<< HEAD
     }
 
+=======
+    public Pet deletePet(int id) {
+        Pet pet = find(id);
+        delete(pet);
+        return pet;
+    }
+
+    public ArrayList<Pet> findALLPets() {
+        ArrayList<Pet> allPets = findAll();
+        return allPets;
+    }
+
+
+
+}
+>>>>>>> john
