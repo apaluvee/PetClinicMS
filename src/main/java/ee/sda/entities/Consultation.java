@@ -8,15 +8,7 @@ import java.util.Objects;
 @Table(name = "consultation")
 
 public class Consultation {
-    public Consultation() {
-    }
 
-    public Consultation(LocalDate consultDate, String consultDescription, Pet pet, Veterinarian veterinarian) {
-        this.consultDate = consultDate;
-        this.consultDescription = consultDescription;
-        this.pet = pet;
-        this.veterinarian = veterinarian;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,8 +29,8 @@ public class Consultation {
     @JoinColumn(name = "vet_id")
     private Veterinarian veterinarian;
 
-<<<<<<< HEAD
-=======
+
+
     public Consultation( LocalDate consultDate, String consultDescription, Pet pet, Veterinarian veterinarian) {
         this.consultDate = consultDate;
         this.consultDescription = consultDescription;
@@ -50,7 +42,6 @@ public class Consultation {
     }
 
 
->>>>>>> john
     public int getId() {
         return id;
     }
