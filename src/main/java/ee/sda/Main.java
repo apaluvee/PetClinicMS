@@ -6,6 +6,7 @@ import ee.sda.dao.PetDAO;
 import ee.sda.dao.VaccineDAO;
 import ee.sda.dao.VeterinarianDAO;
 import ee.sda.db.DatabaseUtil;
+import ee.sda.dto.VeterinarianDTO;
 import ee.sda.entities.Pet;
 import ee.sda.entities.Veterinarian;
 
@@ -155,8 +156,8 @@ public class Main {
 
 
         //UPDATE
-        Veterinarian veterinarianUpdater = veterinarianDAO.updateVet(5,"Kaja","Bold", "Tartu","Cardiology", "kaja.bold@email.go","99772210");
-        System.out.println(veterinarianUpdater);
+        //Veterinarian veterinarianUpdater = veterinarianDAO.updateVet(5,"Kaja","Bold", "Tartu","Cardiology", "kaja.bold@email.go","99772210");
+        //System.out.println(veterinarianUpdater);
 
 
         //DELETE
