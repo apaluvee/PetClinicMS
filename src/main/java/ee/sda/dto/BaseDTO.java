@@ -12,5 +12,8 @@ public class BaseDTO {
     public void setMessage(String message) {
         this.message = message;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89bbd6db74ca08f606a31321d3548907b52d5cb1
 }

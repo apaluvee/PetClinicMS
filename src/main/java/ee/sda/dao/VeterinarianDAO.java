@@ -12,7 +12,6 @@ public class VeterinarianDAO extends AbstractDAO<Veterinarian, Integer> {
         return save(new Veterinarian(first_name, last_name, address, speciality, email, phone));
     }
 
-
     public Veterinarian updateVet(int id, String first_name, String last_name, String address, String speciality, String email, String phone) {
         Veterinarian vet = find(id);
         System.out.println("updating ...");
