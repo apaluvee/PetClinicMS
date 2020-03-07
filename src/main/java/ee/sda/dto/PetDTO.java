@@ -1,10 +1,15 @@
 package ee.sda.dto;
 
-import com.google.gson.Gson;
 import ee.sda.entities.Pet;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class PetDTO extends BaseDTO {
 
     int id;
@@ -25,18 +30,14 @@ public class PetDTO extends BaseDTO {
         this.petName = petName;
     }
 
+
+
     public PetDTO(Pet pet) {
         this.id = pet.getId();
         this.petName = pet.getPetName();
         this.ownerName = pet.getOwnerName();
         this.species = pet.getSpecies();
         this.dob = pet.getDob();
-    }
-
-
-    public String getJson() {
-        Gson gson = new Gson();
-        return gson.toJson(this);
     }
 
 
